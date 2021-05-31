@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewData["Title"] = "BlackJack";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <h3>
+                Jogador 1
+            </h3>
+            <br>
+            <img alt="Carta 1" src="/images/0.png" name="carta1" id="carta1" width="250">
+            <br>
+            <br>
+            <button type="button" class="btn btn-dark" disabled name="btnJogar1" id="btnJogar1" onclick="jogar1()">
+                jogar
+            </button>
+            <button type="button" class="btn btn-dark" disabled name="btnParar1" id="btnParar1" onclick="parar1()">
+                parar
+            </button>
+        </div>
+        <div class="col-4">
+            <div class="col-10 text-center">
+                <h3>
+                    partida
+                </h3>
+                <button type="button" class="btn btn-success" name="btnIniciar" id="btnIniciar" onclick="iniciar()">
+                    iniciar
+                </button>
+                <button type="button" class="btn btn-dark" disabled name="btnReiniciar" id="btnReiniciar" onclick="reiniciar()">
+                    reiniciar
+                </button>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <span class="badge badge-default" id="placar1">0</span>
+                </div>
+                <div class="col-4">
+                    <span class="badge badge-default">x</span>
+                </div>
+                <div class="col-4">
+                    <span class="badge badge-default" id="placar2">0</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 text-center invisible" id="vencedor">
+                    Jogador 1 Ganhou!
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <h3>
+                Jogador 2
+            </h3>
+            <br>
+            <img alt="Carta 2" src="/images/0.png" name="carta2" id="carta2" width="250">
+            <br>
+            <br>
+            <button type="button" class="btn btn-dark" disabled name="btnJogar2" id="btnJogar2" onclick="jogar2()">
+                jogar
+            </button>
+            <button type="button" class="btn btn-dark" disabled name="btnParar2" id="btnParar2" onclick="parar2()">
+                parar
+            </button>
+        </div>
+    </div>
+</div>
+<script src="./js/jogo.js"></script>
