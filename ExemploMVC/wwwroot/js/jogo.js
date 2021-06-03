@@ -108,10 +108,12 @@ function parar1() {
     bloquearBtnJogar1();
     bloquearBtnParar1();
 
-    liberarBtnJogar2();
-    liberarBtnParar2();
-
     parou1 = true;
+
+    if (!parou1 || !parou2) {
+        liberarBtnJogar2();
+        liberarBtnParar2();
+    }
 
     $(vencedor).text(logicaParou());
 }
@@ -121,10 +123,12 @@ function parar2() {
     bloquearBtnJogar2();
     bloquearBtnParar2();
 
-    liberarBtnJogar1();
-    liberarBtnParar1();
-
     parou2 = true;
+
+    if (!parou1 || !parou2) {
+        liberarBtnJogar1();
+        liberarBtnParar1();
+    }
 
     $(vencedor).text(logicaParou());
 }
@@ -181,6 +185,8 @@ function reiniciar() {
 
     liberarBtnJogar1();
     liberarBtnJogar2();
+    bloquearBtnParar1();
+    bloquearBtnParar2();
 }
 
 // Reiniciar
